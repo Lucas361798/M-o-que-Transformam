@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mãos que Transformam - Doe e Transforme Vidas</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Montserrat',sans-serif; }
+
+body {
+  color:#333;
+  line-height:1.6;
+  scroll-behavior:smooth;
+  background-color:#f5f5f5;
+}
+
+/* Menu fixo */
+nav {
+  position: fixed;
+  top:0; left:0; width:100%;
+  background: rgba(0,0,0,0.6);
+  display:flex; justify-content:center;
+  gap:30px;
+  padding:15px 0;
+  z-index:1000;
+  font-weight:bold;
+  text-transform:uppercase;
+}
+nav a {
+  color:#fff; text-decoration:none; transition:0.3s;
+}
+nav a:hover { color:#ff6b6b; }
+
+/* Header com imagem de fundo */
+header {
+  text-align:center;
+  padding:140px 20px 100px 20px;
+  background: url('https://rccinc.ca/wp-content/uploads/2024/02/join-our-team-1.jpg') center/cover no-repeat;
+  color:#fff;
+}
+header h1 { font-size:3em; margin-bottom:10px; text-shadow:2px 2px 8px rgba(0,0,0,0.7);}
+header h2 { font-size:1.5em; margin-bottom:30px; font-weight:400; text-shadow:1px 1px 5px rgba(0,0,0,0.7);}
+header button {
+  background:#ff6b6b; color:white; border:none; padding:18px 50px; font-size:1.3em;
+  border-radius:8px; cursor:pointer; font-weight:bold; transition:0.3s;
+}
+header button:hover { background:#ff4757; transform:scale(1.05); }
+
+/* Seções */
+section {
+  max-width:1200px; margin:50px auto; padding:50px 20px;
+  background: #fff;
+  border-radius:12px;
+  text-align:center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+section h2 { color:#ff6b6b; margin-bottom:25px; font-size:2.2em; }
+section p { font-size:1.1em; margin-bottom:20px; line-height:1.5; color:#333; }
+
+/* Flex boxes */
+.flex { display:flex; gap:30px; flex-wrap:wrap; justify-content:center; margin-top:30px; }
+.flex-item {
+  flex:1; min-width:200px; background:#ffe66d; color:#333; padding:25px; border-radius:12px;
+  cursor:pointer; font-weight:bold; font-size:1.2em; text-align:center; transition:0.3s; display:flex; align-items:center; justify-content:center; gap:10px;
+}
+.flex-item:hover { background:#ffd93d; transform:scale(1.05); }
+
+/* Imagem + texto */
+.image-text { display:flex; gap:20px; flex-wrap:wrap; align-items:center; justify-content:center; margin-top:30px; }
+.image-text img { max-width:400px; width:100%; border-radius:12px; }
+.image-text div { max-width:500px; }
+
+/* PIX flutuante */
+#pix-float {
+  position: fixed;
+  bottom:30px; right:30px;
+  background:#ff6b6b; color:white; border:none; padding:18px 25px; font-size:1.3em;
+  border-radius:50px; cursor:pointer; font-weight:bold; z-index:1000;
+  box-shadow:0 5px 15px rgba(0,0,0,0.4);
+  transition:0.3s;
+}
+#pix-float:hover { background:#ff4757; transform:scale(1.1); }
+
+footer { text-align:center; padding:35px 20px; margin-top:50px; background:#f0f0f0;}
+footer p { margin-bottom:10px; font-weight:bold; color:#333;}
+footer i { margin:0 5px; cursor:pointer; transition:0.3s; font-size:1.3em; color:#ff6b6b; }
+footer i:hover { color:#ffd93d; }
+
+@media(max-width:768px){
+  header h1 { font-size:2em; }
+  header h2 { font-size:1em; }
+  section h2 { font-size:1.5em; }
+  .flex, .image-text { flex-direction:column; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#impact">Impacto</a>
+  <a href="#donate">Doação</a>
+  <a href="#why">Por que doar</a>
+</nav>
+
+<header>
+  <h1>Mãos que Transformam</h1>
+  <h2>Juntos pela esperança de famílias e crianças carentes</h2>
+  <button onclick="document.getElementById('donate').scrollIntoView({behavior:'smooth'});">Doe agora</button>
+</header>
+
+<section id="impact">
+  <h2>O impacto da sua doação</h2>
+  <p>Com sua contribuição, famílias recebem suporte, crianças têm esperança renovada e juntos construímos um futuro melhor.</p>
+  <div class="flex">
+    <div class="flex-item">🍎 Alimentos para crianças</div>
+    <div class="flex-item">👕 Roupas e cobertores</div>
+    <div class="flex-item">🏠 Apoio para famílias</div>
+  </div>
+</section>
+
+<section id="donate">
+  <h2>Faça sua doação via PIX</h2>
+  <p>Escolha um valor e clique para copiar a chave PIX:</p>
+  <div class="flex">
+    <div class="flex-item" onclick="copyPIX()">❤ R$55</div>
+    <div class="flex-item" onclick="copyPIX()">❤ R$98</div>
+    <div class="flex-item" onclick="copyPIX()">❤ R$160</div>
+  </div>
+  <p>Chave PIX: <strong>000.000.000-00</strong></p>
+</section>
+
+<section id="why">
+  <h2>Por que doar?</h2>
+  <div class="image-text">
+    <img src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg" alt="Voluntária ajudando crianças">
+    <div>
+      <p>Doar é oferecer esperança, amor e oportunidades. Cada contribuição transforma vidas e acende luz no caminho de quem mais precisa.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>ONG Mãos que Transformam - CNPJ: 60.979.457/0001-11</p>
+  <p>© 2025 Todos os direitos reservados.</p>
+  <div>
+    <i>🌐</i>
+    <i>📘</i>
+    <i>📸</i>
+  </div>
+</footer>
+
+<button id="pix-float" onclick="copyPIX()">Pix ❤</button>
+
+<script>
+function copyPIX() {
+  const pix = "000.000.000-00";
+  navigator.clipboard.writeText(pix).then(()=> {
+    alert('Chave PIX copiada! Agora cole no seu banco ou aplicativo.');
+  });
+}
+</script>
+
+</body>
+</html>
