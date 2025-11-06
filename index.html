@@ -32,17 +32,21 @@ nav a {
 }
 nav a:hover { color:#ff6b6b; }
 
-/* Header com imagem de fundo */
+/* Cabeçalho com imagem ajustada e mais alto */
 header {
   text-align:center;
-  padding:140px 20px 100px 20px;
-  background: url('https://rccinc.ca/wp-content/uploads/2024/02/join-our-team-1.jpg') center/cover no-repeat;
+  height: 500px;
+  padding:80px 20px;
+  background: 
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('https://i.ibb.co/S4TkR8vH/DBF658-C2-56-D0-4-B73-8276-2627-E6756205.png') center top/contain no-repeat;
+  background-color:#000;
   color:#fff;
 }
-header h1 { font-size:3em; margin-bottom:10px; text-shadow:2px 2px 8px rgba(0,0,0,0.7);}
-header h2 { font-size:1.5em; margin-bottom:30px; font-weight:400; text-shadow:1px 1px 5px rgba(0,0,0,0.7);}
+header h1 { font-size:2.8em; margin-bottom:10px; text-shadow:2px 2px 8px rgba(0,0,0,0.7);}
+header h2 { font-size:1.4em; margin-bottom:35px; font-weight:400; text-shadow:1px 1px 5px rgba(0,0,0,0.7);}
 header button {
-  background:#ff6b6b; color:white; border:none; padding:18px 50px; font-size:1.3em;
+  background:#ff6b6b; color:white; border:none; padding:16px 45px; font-size:1.2em;
   border-radius:8px; cursor:pointer; font-weight:bold; transition:0.3s;
 }
 header button:hover { background:#ff4757; transform:scale(1.05); }
@@ -50,10 +54,10 @@ header button:hover { background:#ff4757; transform:scale(1.05); }
 /* Seções */
 section {
   max-width:1200px; margin:50px auto; padding:50px 20px;
-  background: #fff;
+  background:#fff;
   border-radius:12px;
   text-align:center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 section h2 { color:#ff6b6b; margin-bottom:25px; font-size:2.2em; }
 section p { font-size:1.1em; margin-bottom:20px; line-height:1.5; color:#333; }
@@ -62,14 +66,102 @@ section p { font-size:1.1em; margin-bottom:20px; line-height:1.5; color:#333; }
 .flex { display:flex; gap:30px; flex-wrap:wrap; justify-content:center; margin-top:30px; }
 .flex-item {
   flex:1; min-width:200px; background:#ffe66d; color:#333; padding:25px; border-radius:12px;
-  cursor:pointer; font-weight:bold; font-size:1.2em; text-align:center; transition:0.3s; display:flex; align-items:center; justify-content:center; gap:10px;
+  cursor:pointer; font-weight:bold; font-size:1.2em; text-align:center; transition:0.3s;
+  display:flex; align-items:center; justify-content:center; gap:10px;
 }
 .flex-item:hover { background:#ffd93d; transform:scale(1.05); }
+
+/* Campo de outro valor */
+.donate-input {
+  margin-top:25px;
+}
+.donate-input input {
+  padding:12px; font-size:1.1em; border:2px solid #ccc; border-radius:8px; width:200px; text-align:center;
+}
+.donate-input button {
+  background:#ff6b6b; color:#fff; border:none; padding:12px 25px; font-size:1.1em;
+  border-radius:8px; margin-left:10px; cursor:pointer; transition:0.3s; font-weight:bold;
+}
+.donate-input button:hover { background:#ff4757; transform:scale(1.05); }
+.min-value { margin-top:10px; font-size:0.95em; color:#777; }
 
 /* Imagem + texto */
 .image-text { display:flex; gap:20px; flex-wrap:wrap; align-items:center; justify-content:center; margin-top:30px; }
 .image-text img { max-width:400px; width:100%; border-radius:12px; }
 .image-text div { max-width:500px; }
+
+/* Novo bloco “Veja o que sua boa ação movimenta” */
+#impact-stats {
+  max-width:1200px; 
+  margin:50px auto; 
+  padding:50px 20px;
+  background:#fff; 
+  border-radius:12px;
+  text-align:center; 
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+#impact-stats h2 {
+  color:#ff6b6b;
+  margin-bottom:30px;
+  font-size:2.2em;
+}
+#impact-stats .impact-flex {
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+#impact-stats .flex-item {
+  background:#ffe66d;
+  color:#333;
+  padding:25px;
+  border-radius:12px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  font-size:1.2em;
+  font-weight:bold;
+  transition:0.3s;
+  cursor:default;
+  min-width:180px;
+}
+#impact-stats .flex-item:hover { background:#ffd93d; transform:scale(1.05); }
+
+/* Novo bloco “Convide um amigo” */
+#invite-friend {
+  max-width:1200px;
+  margin:50px auto;
+  padding:50px 20px;
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+#invite-friend .image-text {
+  display:flex;
+  gap:30px;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+#invite-friend .image-text img {
+  max-width:400px;
+  width:100%;
+  border-radius:12px;
+}
+#invite-friend .image-text div {
+  max-width:600px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:left;
+}
+#invite-friend .image-text p {
+  font-size:1.5em;
+  font-weight:bold;
+  color:#333;
+}
 
 /* PIX flutuante */
 #pix-float {
@@ -88,10 +180,13 @@ footer i { margin:0 5px; cursor:pointer; transition:0.3s; font-size:1.3em; color
 footer i:hover { color:#ffd93d; }
 
 @media(max-width:768px){
+  header { height: 320px; padding:50px 15px; }
   header h1 { font-size:2em; }
   header h2 { font-size:1em; }
   section h2 { font-size:1.5em; }
-  .flex, .image-text { flex-direction:column; }
+  .flex, .image-text, #impact-stats .impact-flex { flex-direction:column; }
+  #invite-friend .image-text { flex-direction:column; text-align:center; }
+  #invite-friend .image-text div { text-align:center; }
 }
 </style>
 </head>
@@ -123,11 +218,18 @@ footer i:hover { color:#ffd93d; }
   <h2>Faça sua doação via PIX</h2>
   <p>Escolha um valor e clique para copiar a chave PIX:</p>
   <div class="flex">
-    <div class="flex-item" onclick="copyPIX()">❤ R$55</div>
-    <div class="flex-item" onclick="copyPIX()">❤ R$98</div>
-    <div class="flex-item" onclick="copyPIX()">❤ R$160</div>
+    <div class="flex-item" onclick="copyPIX(55)">❤ R$55</div>
+    <div class="flex-item" onclick="copyPIX(98)">❤ R$98</div>
+    <div class="flex-item" onclick="copyPIX(160)">❤ R$160</div>
   </div>
-  <p>Chave PIX: <strong>000.000.000-00</strong></p>
+
+  <div class="donate-input">
+    <input type="number" id="otherValue" placeholder="Outro valor (R$)">
+    <button onclick="donateOther()">Doar outro valor</button>
+    <div class="min-value">💡 Valor mínimo: R$ 15,00</div>
+  </div>
+
+  <p style="margin-top:25px;">Chave PIX: <strong>000.000.000-00</strong></p>
 </section>
 
 <section id="why">
@@ -140,9 +242,28 @@ footer i:hover { color:#ffd93d; }
   </div>
 </section>
 
+<section id="impact-stats">
+  <h2>Veja o que sua boa ação movimenta</h2>
+  <div class="flex impact-flex">
+    <div class="flex-item">❤<br><strong>858.044</strong><br>atendimentos por ano</div>
+    <div class="flex-item">👨‍💼<br><strong>1.891</strong><br>funcionários</div>
+    <div class="flex-item">🙋‍♂<br><strong>948</strong><br>voluntários</div>
+    <div class="flex-item">♿<br><strong>62.471</strong><br>produtos ortopédicos entregues</div>
+  </div>
+</section>
+
+<section id="invite-friend">
+  <div class="image-text">
+    <img src="https://images.pexels.com/photos/4148860/pexels-photo-4148860.jpeg" alt="Criança autista sorrindo">
+    <div>
+      <p>Continue doando e convide um(a) amigo a doar.<br>Vamos juntos fazer a diferença!</p>
+    </div>
+  </div>
+</section>
+
 <footer>
-  <p>ONG Mãos que Transformam - CNPJ: 60.979.457/0001-11</p>
-  <p>© 2025 Todos os direitos reservados.</p>
+  <p>ONG Mãos que Transformam - CNPJ: 00.000.000/0000-00</p>
+  <p>© 2025 Todos os direitos reservados.</p>
   <div>
     <i>🌐</i>
     <i>📘</i>
@@ -153,11 +274,25 @@ footer i:hover { color:#ffd93d; }
 <button id="pix-float" onclick="copyPIX()">Pix ❤</button>
 
 <script>
-function copyPIX() {
+function copyPIX(value) {
   const pix = "000.000.000-00";
   navigator.clipboard.writeText(pix).then(()=> {
-    alert('Chave PIX copiada! Agora cole no seu banco ou aplicativo.');
+    if (value) {
+      alert(`Chave PIX copiada! Você selecionou doar R$ ${value}. Agora cole no seu banco ou aplicativo.`);
+    } else {
+      alert('Chave PIX copiada! Agora cole no seu banco ou aplicativo.');
+    }
   });
+}
+
+function donateOther() {
+  const input = document.getElementById('otherValue').value;
+  const value = parseFloat(input);
+  if (!value || value < 15) {
+    alert('O valor mínimo para doação é de R$ 15,00.');
+    return;
+  }
+  copyPIX(value);
 }
 </script>
 
